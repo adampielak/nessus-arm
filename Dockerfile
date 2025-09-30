@@ -1,9 +1,10 @@
 #
-#	Dockerfile for running Nessus on arm based hardware.
-#	Author: Jannik Schmied
-#	Tested on: Kali Linux 2023.3 VM (Apple Silicon M1 Max Host)
-#	
-FROM ubuntu:18.04
+#       Dockerfile for running Nessus on arm based hardware.
+#       Author: Jannik Schmied
+#       Tested on: Kali Linux 2023.3 VM (Apple Silicon M1 Max Host)
+#       Modified by tick - tested on Kali Linux 2025.3
+#
+FROM ubuntu:24.04
 
 # Update and install dependencies
 RUN apt-get update
@@ -14,10 +15,10 @@ RUN rm -rf /var/lib/apt/lists/*
 
 # Download and Install Nessus
 RUN curl --request GET \
-  --url 'https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.8.3-ubuntu1804_aarch64.deb' \
-  --output 'Nessus-10.8.3-ubuntu1804_aarch64.deb'
+  --url 'https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.9.4-ubuntu1804_aarch64.deb' \
+  --output 'Nessus-10.9.4-ubuntu1804_aarch64.deb'
 
-RUN dpkg -i Nessus-10.8.3-ubuntu1804_aarch64.deb
+RUN dpkg -i Nessus-10.9.4-ubuntu1804_aarch64.deb
 
 # Expose Web GUI Port
 EXPOSE 8834
