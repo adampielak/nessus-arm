@@ -2,7 +2,7 @@
 
 Docker container for running Tenable Nessus on arm-based Devices such as Apple Silicon.
 
-Tested on: Kali Linux 2023.3 VM (Host: MacBook Pro M1 Max)
+Tested on: Kali Linux 2025.3 VM (Host: MacBook Air M1)
 
 ## Setup
 
