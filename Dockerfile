@@ -15,10 +15,10 @@ RUN rm -rf /var/lib/apt/lists/*
 
 # Download and Install Nessus
 RUN curl --request GET \
-  --url 'https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.11.3-ubuntu1804_aarch64.deb' \
-  --output 'Nessus-10.11.3-ubuntu1804_aarch64.deb'
+  --url 'https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.12.0-ubuntu1804_aarch64.deb' \
+  --output 'Nessus-10.12.0-ubuntu1804_aarch64.deb'
 
-RUN dpkg -i Nessus-10.11.3-ubuntu1804_aarch64.deb
+RUN dpkg -i Nessus-10.12.0-ubuntu1804_aarch64.deb
 
 # Expose Web GUI Port
 EXPOSE 8834
